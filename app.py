@@ -1,3 +1,5 @@
+# Lucas Gadonski e Cristian Domingues
+
 import logging
 import os
 
