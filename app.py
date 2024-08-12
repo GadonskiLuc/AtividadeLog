@@ -1,21 +1,17 @@
 import logging
 import os
 
-# Criação e configuração do logger
 log_filename = 'app.log'
 log_format = '%(asctime)s - %(levelname)s - %(message)s'
 
-# Configuração básica do logger
 logging.basicConfig(
     filename=log_filename,
-    level=logging.DEBUG,  # Define o nível mínimo de log a ser registrado
+    level=logging.DEBUG, 
     format=log_format
 )
 
-# Criação de um logger
 logger = logging.getLogger()
 
-# Função principal simulando algumas operações e gerando logs
 def main():
     logger.debug('Este é um log de debug, util para diagnósticos detalhados.')
     logger.info('A aplicação iniciou com sucesso.')
