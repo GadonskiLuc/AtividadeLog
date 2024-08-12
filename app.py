@@ -21,32 +21,26 @@ def main():
     logger.info('A aplicação iniciou com sucesso.')
     
     try:
-        # Simulação de uma operação
         x = 10 / 2
         logger.info(f'Operação realizada com sucesso, resultado: {x}')
         
-        # Simulação de uma operação que gera um warning
         if x > 4:
             logger.warning('O resultado e maior que o esperado, verifique os dados de entrada.')
         
-        # Simulação de uma operação que gera um erro
-        y = 10 / 0  # Isso gerará uma exceção
+        y = 10 / 0 
     except ZeroDivisionError as e:
         logger.error(f'Ocorreu um erro: {e}')
     
     try:
-        # Simulação de um erro crítico
         data = None
         if data is None:
             raise ValueError('Os dados não foram carregados corretamente!')
     except ValueError as e:
         logger.critical(f'Erro crítico: {e}')
 
-# Execução da função principal
 if __name__ == '__main__':
     main()
 
-# Verificação da existência do arquivo de log
 if os.path.exists(log_filename):
     print(f"Logs foram salvos em '{log_filename}'.")
 else:
