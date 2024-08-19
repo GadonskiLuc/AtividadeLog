@@ -1,6 +1,0 @@
-2024-08-12 20:39:49,926 - DEBUG - Este é um log de debug, útil para diagnósticos detalhados.
-2024-08-12 20:39:49,926 - INFO - A aplicação iniciou com sucesso.
-2024-08-12 20:39:49,927 - INFO - Operação realizada com sucesso, resultado: 5.0
-2024-08-12 20:39:49,927 - WARNING - O resultado é maior que o esperado, verifique os dados de entrada.
-2024-08-12 20:39:49,927 - ERROR - Ocorreu um erro: division by zero
-2024-08-12 20:39:49,927 - CRITICAL - Erro crítico: Os dados não foram carregados corretamente!
