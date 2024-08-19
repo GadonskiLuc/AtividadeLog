@@ -8,7 +8,7 @@ log_filename = 'app.log'
 log_format = '%(asctime)s - %(levelname)s - %(message)s'
 
 
-# Seu Customer Token do Loggly
+#Customer Token do Loggly
 CUSTOMER_TOKEN = "7ced1e71-c5a8-4343-9183-18d07579696a"
 
 # URL do Loggly para o envio dos logs
@@ -17,7 +17,6 @@ LOGGLY_URL = f"https://logs-01.loggly.com/inputs/{CUSTOMER_TOKEN}/tag/python/"
 # Função para enviar logs para o Loggly
 def send_to_loggly(message):
     try:
-        # A mensagem já é formatada pelo Loguru, então só enviamos o JSON
         requests.post(LOGGLY_URL, json={"message": message})
     except Exception as e:
         logger.error(f"Falha ao enviar log para Loggly: {e}")
@@ -47,7 +46,7 @@ except ValueError as e:
     logger.critical(f'Erro crítico: {e}')
 
 
-
+#Salvando Logs no arquivo app.log
 if os.path.exists(log_filename):
     print(f"Logs foram salvos em '{log_filename}'.")
 else:
